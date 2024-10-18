@@ -2,4 +2,7 @@
     root * /var/www/html/public
     php_fastcgi php:9000
     file_server
+    handle_path /phpmyadmin/* {
+        reverse_proxy phpmyadmin:80
+    }
 }
